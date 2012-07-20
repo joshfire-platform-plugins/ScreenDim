@@ -2,23 +2,26 @@
     // dims by default
     var on = true;
 
-    gap.screenDim = { };
+    var screenDim = { };
 
-    gap.screenDim.enable = function () {
+    screenDim.enable = function () {
         on = true;
         gap.exec(null, null, 'ScreenDim', 'enable', []);
     };
 
-    gap.screenDim.disable = function () {
+    screenDim.disable = function () {
         on = false;
         gap.exec(null, null, 'ScreenDim', 'disable', []);
     };
 
-    gap.screenDim.toggle = function () {
+    screenDim.toggle = function () {
         if (on) {
             this.disable();
         } else {
             this.enable();
         }
     };
+
+    Joshfire.factory.addons.screendim = screenDim;
+    
 }).call(this, (window.cordova || window.Cordova));

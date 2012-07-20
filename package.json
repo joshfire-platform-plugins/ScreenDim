@@ -1,0 +1,28 @@
+{
+  "name": "screendim",
+  "fullName": "Screen dimming control",
+  "version": "1.0.0",
+  "keywords": [
+    "powermanagement",
+    "display",
+    "screensaver"
+  ],
+  "description": "Control screen dimming to avoid power management turning the screen off. iOS/Android apps only",
+  "joshfire": {
+    "images": {},
+    "hooks": [
+      "xcodeproj"
+    ],
+    "options": {
+      "schema": {
+        "disabled": {
+          "type": "boolean",
+          "title": "Disable screen dimming at app startup"
+        }
+      },
+      "form":[
+        "disabled"
+      ]
+    }
+  }
+}
