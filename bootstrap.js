@@ -1,7 +1,7 @@
 define([], function () {
   return function(runtime, params, callback) {
 
-    if (params.deploy.cordova && (params.deploy.ios || params.deploy.android)) {
+    if (params.deploy.flags.cordova && (params.deploy.flags.ios || params.deploy.flags.android)) {
       runtime.readFile("www/screendim.js",function(err,cnt) {
         params.content+=cnt;
 

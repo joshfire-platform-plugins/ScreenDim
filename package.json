@@ -11,7 +11,8 @@
   "joshfire": {
     "images": {},
     "hooks": [
-      "xcodeproj"
+      "xcodeproj",
+      "bootstrap"
     ],
     "options": {
       "schema": {

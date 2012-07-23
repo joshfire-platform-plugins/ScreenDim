@@ -3,9 +3,14 @@ define([], function () {
 
     runtime.xcodeproj.cordovaPlist.Plugins.ScreenDim = "ScreenDimPlugin";
 
-    runtime.xcodeproj.addSourceFile("ScreenDimPlugin.m");
-    runtime.xcodeproj.addHeaderFile("ScreenDimPlugin.h");
-
-    callback();
+    runtime.async.series([
+      function(cb) {
+        runtime.xcodeproj.addSourceFile("ScreenDimPlugin.m",cb);
+      },
+      function(cb) {
+        runtime.xcodeproj.addHeaderFile("ScreenDimPlugin.h",cb);
+      }
+    ],callback);
+    
   };
 });
